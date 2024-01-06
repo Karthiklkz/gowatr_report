@@ -26,18 +26,19 @@
     <!-- AIUI Admin skins -->
     <link rel="stylesheet" href="css/skins/_all-skins.css">
 
-    <script defer src="table/js/jquery.dataTables.min.js"></script>
-<script defer src="table/js/dataTables.bootstrap.min.js"></script>		
-<link  rel="stylesheet" href="table/css/dataTables.bootstrap.min.css" />
-<script defer src="table/js/data.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link   href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	<script  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script  src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
+
+	<![endif]-->
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-
 </head>
 <style>
 #reasonTextarea1 {
@@ -55,8 +56,22 @@
 #reasonTextarea4 {
     display: none;
 }
-</style>
 
+	table{
+		width:100%;
+	}
+	#example_filter{
+		float:right;
+	}
+	#example_paginate{
+		float:right;
+	}
+	label {
+		display: inline-flex;
+		margin-bottom: .5rem;
+		margin-top: .5rem;
+	}
+</style>
 <body class="hold-transition skin-black light-sidebar sidebar-mini">
     <!-- Site wrapper -->
     <div class="wrapper">
@@ -290,73 +305,81 @@
          
 		
 			
-		            <div class="card">
-                        <table id="employeeList" class="table table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Date & Time</th>
-                                    <th>Site</th>
-                                    <th>Power</th>					
-                                    <th>Power Reason</th>					
-                                    <th>Network</th>
-                                    <th>Network Reason</th>
-                                    <th>IoT 1</th>
-                                    <th>IoT 1 Reason </th>
-                                    <th>IoT 1</th>
-                                    <th>IoT 2 Reason </th>
-                                    <th>images</th>					
-                                    <th>summary</th>					
-                                    <th>Status</th>					
-                                   
-                                    <th></th>
-                                    <th></th>					
-                                </tr>
-                            </thead>
-                        </table>
+                        <table  id="example" class="table table-striped table-bordered table-hover">
+			<thead>
 
-                        <div id="employeeModal" class="modal fade">
-                            <div class="modal-dialog">
-                                <form method="post" id="employeeForm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title"><i class="fa fa-plus"></i> Edit User</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                           
-                                           
-
-                                            <div class="form-group">
-                                                <label for="Tag2 " class="control-label">issue_status</label>		
-                                              
-                                                
-                                            <select id="issue_status" name="issue_status" class="form-control" id="exampleFormControlSelect2" required >
-                                                    <option hidden >Select Status</option>
-                                                    <option value='PENDING'>PENDING</option>
-                                                    <option value='ON HOLD'>ON HOLD</option>
-                                                    <option value='SOLVED'>SOLVED</option>
-                                                    <option value='WORKING'>WORKING</option>
-                                                    </select> 
-                                            </div>
-
-                                        </div>
-                                        <div class="modal-footer">
-                                            <input type="hidden" name="id" id="id" />
-                                            <input type="hidden" name="action" id="action" value="" />
-                                            <input type="submit" name="save" id="save" class="btn btn-info" value="Save" />
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-		            </div>
-       
+				<th>#</th>
+				<th>Site_name</th>
+				<th>Power</th>
+				<th>power_issue</th>
+				<th>network</th>
+				<th>network_issue</th>
+				<th>IoT 1</th>
+				<th>IoT 1 Reason</th>
+				<th>IoT 2</th>
+				<th>IoT 2 Reason</th>
+				<th>images</th>
+				<th>summary</th>
+				<th>issue_status</th>
+				<th>Action</th>
+			</thead>
+			<tbody>
+			<?php
+				include('conn.php');
+				
+				$query=mysqli_query($conn,"select * from `report_site` order by id desc");
+				while($row=mysqli_fetch_array($query)){
+					?>
+					<tr>
+						<td><?php echo ucwords($row['id']); ?></td>
+						<td><?php echo ucwords($row['site_name']); ?></td>
+						<td><?php echo ucwords($row['power']); ?></td>
+						<td><?php echo $row['power_issue']; ?></td>
+						<td><?php echo $row['network']; ?></td>
+						<td><?php echo $row['network_issue']; ?></td>
+						<td><?php echo $row['iot_1']; ?></td>
+						<td><?php echo $row['iot1_issue']; ?></td>
+						<td><?php echo $row['iot_2']; ?></td>
+						<td><?php echo $row['iot2_issue']; ?></td>
+						<td><?php echo $row['images']; ?></td>
+						<td><?php echo $row['summary']; ?></td>
+						<td><?php echo $row['issue_status']; ?></td>
+						<td>
+							<a href="#edit<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Edit</a> || 
+							<a href="#del<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+							<?php include('table/button.php'); ?>
+						</td>
+					</tr>
+					<?php
+				}
+			
+			?>
+			</tbody>
+		</table>
+		<script>
+                    $(document).ready(function() {
+                        $('#example').DataTable(
+                            {     
+                                "aLengthMenu": [[25, 50, 75, -1], [25, 50, 75, "All"]],
+                                "iDisplayLength": -1
+                        } 
+                            );
+                    });
 
 
+                    function checkAll(bx) {
+                    var cbs = document.getElementsByTagName('input');
+                    for(var i=0; i < cbs.length; i++) {
+                        if(cbs[i].type == 'checkbox') {
+                        cbs[i].checked = bx.checked;
+                        }
+                    }
+                            }
+	</script>
 
 
+
+<?php include('table/add_modal.php'); ?>
                         </div>
                     </div>
                 </div>
