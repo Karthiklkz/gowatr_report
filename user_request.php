@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from aiui-admin.wordpressthemeshub.com/main/fullscreen.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Jan 2024 11:41:44 GMT -->
+
 
 <head>
     <meta charset="utf-8">
@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="https://aiui-admin.wordpressthemeshub.com/images/favicon.ico">
+    <link rel="icon" href="images/GoWatr_logo.png">
 
     <title>Report</title>
 
@@ -364,7 +364,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+      </section>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
@@ -726,6 +726,5 @@
 
 </body>
 
-<!-- Mirrored from aiui-admin.wordpressthemeshub.com/main/fullscreen.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Jan 2024 11:41:45 GMT -->
 
 </html>
