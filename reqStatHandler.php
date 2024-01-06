@@ -287,8 +287,7 @@
                     <div class="col-12">
                         <div class="box">
                             
-                        <div class="container" style="margin-top:30px">
-		<div class="row">
+         
 		
 			
 		            <div class="card">
@@ -325,92 +324,20 @@
                                             <h4 class="modal-title"><i class="fa fa-plus"></i> Edit User</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <div class="form-group">
-                                            <label for="name" class="control-label">Date Time</label>
-                                                <input type="text" class="form-control" id="time_received" name="title" placeholder="Name" required>			
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="position" class="control-label">site_name</label>							
-                                                <input type="text" class="form-control" id="site_name" name="site_name" placeholder="site_name">				
-                                                
-                                                <!-- <select name="timing" id="timing" class="form-control" id="exampleFormControlSelect2" required >
-                                                    <option hidden >Select Timing</option>
-                                                    <option value='Full Time'>Full Time</option>
-                                                    <option value='Part Time'>Part Time</option>
-                                                    <option value='ODC'>ODC</option>
-                                                    <option value='Intern'>Intern</option>
-                                                </select> -->
-                                            </div>
+                                           
+                                           
 
-
-                                            <div class="form-group">
-                                                <label for="position" class="control-label">power</label>							
-                                                <input type="text" class="form-control" id="power" name="power" placeholder="power">							
-                                            </div>	  
-
-                                            <div class="form-group">
-                                                <label for="lastname" class="control-label">Power Reason</label>							
-                                                <input type="text" class="form-control"  id="power_issue" name="power_issue" placeholder="power_issue" required>							
-                                            </div>	 
-
-                                            <div class="form-group">
-                                                <label for="years" class="control-label">Network</label>		
-                                                <input type="text" class="form-control" id="network" name="network" placeholder="Network">	
-                                            </div>
-
-
-                                            <div class="form-group">
-                                                <label for="years" class="control-label">Network_issue</label>		
-                                                <input type="text" class="form-control" id="network_issue" name="network_issue" placeholder="Network_issue">
-                                                <!-- <select  id="gender" name="gender" class="form-control" id="exampleFormControlSelect2" required >
-                                                    <option hidden >Select Gender</option>
-                                                    <option value='Male'>Male</option>
-                                                    <option value='Female'>Female</option>
-                                                    <option value='others'>others</option>
-                                                </select> -->
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="lastname" class="control-label">IoT 1</label>		
-                                                <input type="text" class="form-control" id="iot_1" name="iot_1" placeholder="iot_1">		
-                                            </div>			
-
-                                            <div class="form-group">
-                                                <label for="years" class="control-label">Salary From</label>		
-                                                <input type="text" class="form-control" id="iot1_issue" name="iot1_issue" placeholder="iot1_issue">	
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="years" class="control-label">Salary to</label>		
-                                                <input type="text" class="form-control" id="iot_2" name="iot_2" placeholder="iot_2">	
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <label for="Tag1" class="control-label">Tag 1</label>		
-                                                <input type="text" class="form-control" id="iot2_issue" name="iot2_issue" placeholder="iot2_issue">	
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="Tag2 " class="control-label">images</label>		
-                                                <input type="text" class="form-control" id="images" name="images" placeholder="images">	
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label for="Tag2 " class="control-label">summary</label>		
-                                                <input type="text" class="form-control" id="summary" name="summary" placeholder="summary">
-                                                
-                                                <!-- <select id="job_status" name="job_status" class="form-control" id="exampleFormControlSelect2" required >
-                                                    <option hidden >Select Status</option>
-                                                    <option value='Open'>Open</option>
-                                                    <option value='Closed'>Closed</option>
-                                                    <option value='On Hold'>On Hold</option>
-                                                    </select> -->
-                                            </div>
                                             <div class="form-group">
                                                 <label for="Tag2 " class="control-label">issue_status</label>		
-                                                <input type="text" class="form-control" id="issue_status" name="issue_status" placeholder="issue_status">
+                                              
                                                 
-                                            
+                                            <select id="issue_status" name="issue_status" class="form-control" id="exampleFormControlSelect2" required >
+                                                    <option hidden >Select Status</option>
+                                                    <option value='PENDING'>PENDING</option>
+                                                    <option value='ON HOLD'>ON HOLD</option>
+                                                    <option value='SOLVED'>SOLVED</option>
+                                                    <option value='WORKING'>WORKING</option>
+                                                    </select> 
                                             </div>
 
                                         </div>
@@ -425,9 +352,7 @@
                             </div>
                         </div>
 		            </div>
-        </div>
-
-        </div>
+       
 
 
 

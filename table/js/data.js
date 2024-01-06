@@ -35,19 +35,7 @@ $(document).ready(function(){
 			dataType:"json",
 			success:function(data){
 				$('#employeeModal').modal('show');
-				$('#id').val(data.id);
-				$('#time_received').val(data.time_received);
-				$('#site_name').val(data.site_name);
-				$('#power').val(data.power);
-				$('#power_issue').val(data.power_issue);				
-				$('#network').val(data.network);
-				$('#network_issue').val(data.network_issue);
-				$('#iot_1').val(data.iot_1);	
-				$('#iot1_issue').val(data.iot1_issue);	
-				$('#iot_2').val(data.iot_2);	
-				$('#iot2_issue').val(data.iot2_issue);	
-				$('#images').val(data.images);	
-				$('#summary').val(data.summary);	
+				$('#id').val(data.id);		
 				$('#issue_status').val(data.issue_status);	
 				$('.modal-title').html("<i class='fa fa-plus'></i> Edit Job Details");
 				$('#action').val('updateEmployee');

@@ -126,7 +126,7 @@ class Employee extends Dbconfig {
 	public function updateEmployee(){
 		if($_POST['id']) {	
 			$updateQuery = "UPDATE ".$this->empTable." 
-			SET time_received = '".$_POST["time_received"]."', site_name = '".$_POST["site_name"]."', power = '".$_POST["power"]."', power_issue = '".$_POST["power_issue"]."', network = '".$_POST["network"]."' , iot_1 = '".$_POST["iot_1"]."' ,   iot1_issue = '".$_POST["iot1_issue"]."' ,  iot_2 = '".$_POST["iot_2"]."' , iot2_issue = '".$_POST["iot2_issue"]."' , images = '".$_POST["images"]."' , summary = '".$_POST["summary"]."', issue_status = '".$_POST["issue_status"]."'
+			SET  issue_status = '".$_POST["issue_status"]."'
 			WHERE id ='".$_POST["id"]."'";
 			$isUpdated = mysqli_query($this->dbConnect, $updateQuery);		
 		}	

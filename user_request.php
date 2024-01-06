@@ -251,33 +251,10 @@
             <div class="content-header d-none d-md-block">
                 <div class="d-flex align-items-center">
                     <div class="mr-auto">
-                        <h3 class="page-title br-0">Form</h3>
+                        <h3 class="page-title br-0">QSIR</h3>
                     </div>
                     <div class="right-title">
-                        <div class="d-flex mt-10 justify-content-end">
-                            <div class="d-md-flex mr-20 ml-10 d-none">
-                                <div class="chart-text mr-10">
-                                    <p class="mb-0 font-size-12">THIS MONTH</p>
-                                    <h4 class="my-0 text-primary">$12,125</h4>
-                                </div>
-                                <div class="spark-chart">
-                                    <div id="thismonth"><canvas width="60" height="35"
-                                            style="display: inline-block; width: 60px; height: 35px; vertical-align: top;"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-md-flex ml-10 d-none">
-                                <div class="chart-text mr-10">
-                                    <p class="mb-0 font-size-12">LAST YEAR</p>
-                                    <h4 class="my-0 text-danger">$22,754</h4>
-                                </div>
-                                <div class="spark-chart">
-                                    <div id="lastyear"><canvas width="60" height="35"
-                                            style="display: inline-block; width: 60px; height: 35px; vertical-align: top;"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -287,12 +264,6 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="box">
-
-
-
-
-
-
                             <form role="form" class="form-element">
                                 <div class="box-body">
                                     <div class="row">
@@ -310,30 +281,22 @@
 
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Power Issue</label>
-                                                <select class="form-control">
+                                                <select class="form-control" id="power1"
+                                                    onchange="toggleTextarea1('power1')">
                                                     <option hidden>Select</option>
                                                     <option value="available">Available</option>
                                                     <option value="not available">Not Available</option>
 
                                                 </select>
                                             </div>
+                                            <div id="reasonTextarea1" class="beside">
+                                                <textarea id="reason" placeholder="Reason"></textarea>
+                                            </div>
                                         </div>
 
                                     </div>
 
-                                    <div class="col-sm">
-                                        <div class="beside">
-                                            <label for="power1">Power Availability</label> <br>
-                                            <select name="power" id="power1" onchange="toggleTextarea1('power1')">
-                                                <option class="d-none">Select</option>
-                                                <option value="available">Available</option>
-                                                <option value="not available">Not Available</option>
-                                            </select>
-                                        </div>
-                                        <!-- <div id="reasonTextarea1" class="beside">
-                                    <textarea id="reason" placeholder="Reason"></textarea>
-                                </div> -->
-                                    </div>
+
 
                                     <div class="row">
                                         <div class="col">
@@ -401,7 +364,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->

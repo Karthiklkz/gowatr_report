@@ -4,11 +4,11 @@
 	  <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="image">
-          <img src="images/avatar/2.jpg" class="rounded-circle" alt="User Image">
+          <img src="images/GoWatr_logo.png" class="rounded-circle" alt="User Image">
         </div>
         <div class="info">
           <p>Gowatr</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        
         </div>
       </div>
       <!-- search form -->
