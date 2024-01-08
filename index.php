@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
   
-<!-- Mirrored from aiui-admin.wordpressthemeshub.com/main/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Jan 2024 11:40:31 GMT -->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,7 +51,6 @@
 		<a href="index" class="logo">
 		  <!-- logo-->
 		  <span class="logo-lg">
-			  <img src="images/logo-light-text.png" alt="logo" class="light-logo">
 			  <img src="images/logo-dark-text.png" alt="logo" class="dark-logo">
 		  </span>
 		</a>	  
@@ -1068,5 +1067,4 @@
 	
 </body>
 
-<!-- Mirrored from aiui-admin.wordpressthemeshub.com/main/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Jan 2024 11:40:58 GMT -->
 </html>

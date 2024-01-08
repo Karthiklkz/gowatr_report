@@ -26,7 +26,7 @@
       <!-- sidebar menu-->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="treeview">
-          <a href="index">
+          <a href="../index">
             <i class="mdi mdi-view-dashboard"></i> <span>Dashboard</span>
 		        	<span class="pull-right-container">
               <i class="ti-plus pull-right"></i>
