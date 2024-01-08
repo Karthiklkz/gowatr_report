@@ -51,6 +51,28 @@
           </a>
         </li>
 
+        <li>
+          <a href="main/greenpharma">
+            <i class="mdi mdi-email-variant"></i> <span>Green Pharma</span>
+          </a>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="mdi mdi-file-document"></i> <span>Checkdata</span>
+            <span class="pull-right-container">
+              <i class="ti-plus pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="form-advanced.html"><i class="mdi mdi-resize-bottom-right"></i>Adv.Elements</a></li>
+            <li><a href="code-editor.html"><i class="mdi mdi-resize-bottom-right"></i>Code Editor</a></li>
+            <li><a href="editors.html"><i class="mdi mdi-resize-bottom-right"></i>Editors</a></li>
+            <li><a href="form-validation.html"><i class="mdi mdi-resize-bottom-right"></i>Validation</a></li>
+            <li><a href="form-wizard.html"><i class="mdi mdi-resize-bottom-right"></i>Wizard</a></li>
+            <li><a href="form-general.html"><i class="mdi mdi-resize-bottom-right"></i>General Elements</a></li>
+          </ul>
+        </li>
 
       </ul>
     </section>
