@@ -323,36 +323,7 @@
 				<th>Action</th>
 			</thead>
 			<tbody>
-			<?php
-				include('conn.php');
-				
-				$query=mysqli_query($conn,"select * from `report_site` order by id desc");
-				while($row=mysqli_fetch_array($query)){
-					?>
-					<tr>
-						<td><?php echo ucwords($row['id']); ?></td>
-						<td><?php echo ucwords($row['site_name']); ?></td>
-						<td><?php echo ucwords($row['power']); ?></td>
-						<td><?php echo $row['power_issue']; ?></td>
-						<td><?php echo $row['network']; ?></td>
-						<td><?php echo $row['network_issue']; ?></td>
-						<td><?php echo $row['iot_1']; ?></td>
-						<td><?php echo $row['iot1_issue']; ?></td>
-						<td><?php echo $row['iot_2']; ?></td>
-						<td><?php echo $row['iot2_issue']; ?></td>
-						<td><?php echo $row['images']; ?></td>
-						<td><?php echo $row['summary']; ?></td>
-						<td><?php echo $row['issue_status']; ?></td>
-						<td>
-							<a href="#edit<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-warning"><span class="glyphicon glyphicon-edit"></span> Edit</a> || 
-							<a href="#del<?php echo $row['id']; ?>" data-toggle="modal" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Delete</a>
-							<?php include('table/button.php'); ?>
-						</td>
-					</tr>
-					<?php
-				}
-			
-			?>
+		
 			</tbody>
 		</table>
 		<script>
@@ -361,7 +332,7 @@
                             {     
                                 "aLengthMenu": [[25, 50, 75, -1], [25, 50, 75, "All"]],
                                 "iDisplayLength": -1
-                        } 
+                            } 
                             );
                     });
 

@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Prepare SQL statement to select user with provided email and password
         $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
-		echo $sql ;
+
         $stmt = mysqli_query($conn, $sql);
         
 		$num_row = mysqli_num_rows($stmt);
@@ -85,7 +85,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Set a cookie to remember the user's email for 30 days
                 setcookie("remember_user", $email, time() + (86400 * 30), "/");
             }
-
+            session_start();
+                            
+            // Store data in session variables
+            $_SESSION["loggedin"] = true;
+            $_SESSION["id"] = $fetch["id"];
+            $_SESSION["username"] = $username; 
+            $_SESSION["email"] = $fetch["email"]; 
+            $_SESSION["user_ai"] =$fetch["user_ai"]; 
+            
+            if($_SESSION["user_ai"]==1){
+                header('location:index.php');
+                die();
+            }if($_SESSION["user_ai"]==2){
+                header('location:index.php');
+                die();
+            }if($_SESSION["user_ai"]==3){
+              header('location:index.php');
+              die();
+          }
             // Redirect or perform any other actions after successful validation
              header("Location: index");
             // exit();

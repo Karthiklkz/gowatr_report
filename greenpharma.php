@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
- <?php 
-        require "../conn.php";
-        require "../head.php";
- ?>
+<?php
+require "conn.php";
+require "head.php";
+?>
 
 <body class="hold-transition skin-black light-sidebar sidebar-mini">
-<link rel="stylesheet" type="text/css" href="../assets/vendor_components/datatable/datatables.min.css"/>
+<link rel="stylesheet" type="text/css" href="assets/vendor_components/datatable/datatables.min.css"/>
 <div class="wrapper">
-<script src="../assets/vendor_components/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+<script src="assets/vendor_components/jquery-3.3.1/jquery-3.3.1.min.js"></script>
    <header class="main-header">	
 	  <div class="p-10 clearfix float-left logo-block">
 		<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
 			<i class="ti-align-left"></i>
 		</a>
 		<!-- Logo -->
-		<a href="../index" class="logo">
+		<a href="index" class="logo">
 		  <!-- logo-->
 		  
 		</a>	  
@@ -30,7 +30,7 @@
 				<li class="dropdown nav-item">
 				
 					<div class="dropdown-menu">
-						<div class="dropdown-menu-header-inner bg-img" style="background-image: url('../images/gallery/landscape1.jpg');" data-overlay="5">
+						<div class="dropdown-menu-header-inner bg-img" style="background-image: url('images/gallery/landscape1.jpg');" data-overlay="5">
 							<div class="p-30 text-left w-250">
 								<h5 class="text-white">Overview</h5>
 								<h6 class="text-white">Unlimited options</h6>
@@ -62,7 +62,7 @@
 		  <!-- User Account-->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../images/avatar/avatar.png" class="img-fluid" alt="" />
+              <img src="images/avatar/avatar.png" class="img-fluid" alt="" />
             </a>
 			<ul class="dropdown-menu scale-up">
               <!-- Menu Body -->
@@ -87,7 +87,7 @@
   </header>
 
   <!-- Left side column. contains the sidebar -->
-  <?php   require "../sidebar.php"; ?>
+  <?php   require "sidebar.php"; ?>
 
 
   <!-- Content Wrapper. Contains page content -->
@@ -235,28 +235,28 @@
 	 
 	
 	<!-- popper -->
-	<script src="../assets/vendor_components/popper/dist/popper.min.js"></script>
+	<script src="assets/vendor_components/popper/dist/popper.min.js"></script>
 	
 	<!-- Bootstrap 4.0-->
-	<script src="../assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="assets/vendor_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	
 	<!-- SlimScroll -->
-	<script src="../assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	
 	<!-- FastClick -->
-	<script src="../assets/vendor_components/fastclick/lib/fastclick.js"></script>
+	<script src="assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	
 	<!-- Sparkline -->
-	<script src="../assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+	<script src="assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 	
 	<!-- AIUI Admin App -->
-	<script src="js/template.js"></script>
-	
-	<!-- This is data table -->
-    <script src="../assets/vendor_components/datatable/datatables.min.js"></script>
-	
-	<!-- AIUI Admin for Data Table -->
-	<script src="js/pages/data-table.js"></script>
+    <script src="main/js/template.js"></script>
+
+    <!-- This is data table -->
+    <script src="assets/vendor_components/datatable/datatables.min.js"></script>
+
+    <!-- AIUI Admin for Data Table -->
+    <script src="main/js/pages/data-table.js"></script>
 	
    
 

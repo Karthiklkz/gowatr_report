@@ -96,7 +96,7 @@
 	  <div class="content-header d-none d-md-block">
 			<div class="d-flex align-items-center">
 				<div class="mr-auto">
-					<h3 class="page-title br-0">Green Pharma</h3>
+					<h3 class="page-title br-0">Brownstone A</h3>
 				</div>
 				<div class="right-title">
 					<div class="d-flex mt-10 justify-content-end">
@@ -118,76 +118,48 @@
             <!-- /.box-header -->
             <div class="box-body">
 				<div class="table-responsive">
-				  <table id="green_pharma" class="table table-bordered table-hover display nowrap margin-top-10 w-p100">
+				  <table id="brownstonea" class="table table-bordered table-hover display nowrap margin-top-10 w-p100">
 					<thead>
 						<tr>
 							<th>id</th>
-							<th>Data</th>
-							<th>Time_received</th>
-							<th>Sumpmotorone</th>
-							<th>Sumpmotortwo</th>
-							<th>Sump</th>
-							<th>Sumpcm</th>
-							<th>Ohtmotorone</th>
-							<th>Ohtone</th>
-							<th>Oht1cm</th>
-							<th>ohtmotortwo</th>
-							<th>ohttwo</th>
-							<th>oht2cm</th>
-							<th>iot_date</th>
-							<th>iot_time</th>
+							
+							<th>Time_received_data</th>
+                            <th>Data</th>
+							<th>Adomestic</th>
+							<th>Ametro</th>
+							<th>Adomv</th>
+							<th>Ametrov</th>
+							<th>Wifi_status</th>
+							
+							
 						</tr>
 					</thead>
 					<tbody>
                        
 					
 					</tbody>				  
-					<tfoot>
-						<tr>
-						<th>id</th>
-							<th>Data</th>
-							<th>Time_received</th>
-							<th>Sumpmotorone</th>
-							<th>Sumpmotortwo</th>
-							<th>Sump</th>
-							<th>Sumpcm</th>
-							<th>Ohtmotorone</th>
-							<th>Ohtone</th>
-							<th>Oht1cm</th>
-							<th>ohtmotortwo</th>
-							<th>ohttwo</th>
-							<th>oht2cm</th>
-							<th>iot_date</th>
-							<th>iot_time</th>
-						</tr>
-					</tfoot>
+					
 				</table>
           
                     <script>
                         $(document).ready(function() {
-                            $('#green_pharma').DataTable({
+                            $('#brownstonea').DataTable({
                                     "ajax": {
-                                        "url": "api/api_call.php?id=greenpharma", // Path to your PHP script fetching data
+                                        "url": "api/api_call.php?id=brownstonea", // Path to your PHP script fetching data
                                         "type": "GET",
                                         "dataType": "json",
                                         "dataSrc": "" // No need to specify if the returned data is in the correct format
                                     },
                                     "columns": [
                                     { "data": "id" },
-                                    { "data": "data" },
                                     { "data": "time_received_data" },
-                                    { "data": "sumpmotorone" },
-                                    { "data": "sumpmotortwo" },
-                                    { "data": "sump" },
-                                    { "data": "sumpcm" },
-                                    { "data": "ohtmotorone" },
-                                    { "data": "ohtone" },
-                                    { "data": "oht1cm" },
-                                    { "data": "ohtmotortwo" },
-                                    { "data": "ohttwo" },
-                                    { "data": "oht2cm" },
-                                    { "data": "iot_date" },
-                                    { "data": "iot_time" }
+                                    { "data": "data" },
+                                    { "data": "adomestic" },
+                                    { "data": "ametro" },
+                                    { "data": "adomv" },
+                                    { "data": "ametrov" },
+                                    { "data": "wifi_status" }
+                                    
                                 ],
 								"pageLength": 100,
 								dom: 'Bfrtip',
@@ -258,7 +230,14 @@
 	<!-- AIUI Admin for Data Table -->
 	<script src="js/pages/data-table.js"></script>
 	
-   
+    <script>
+        $(document).ready(function() {
+    $.fn.dataTable.defaults.deferRender = false;
+});
+$(document).ready(function() {
+    $.fn.dataTable.ext.errMode = 'none';
+});
+  </script>
 
 </body>
 

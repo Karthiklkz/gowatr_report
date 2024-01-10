@@ -39,7 +39,60 @@
 </head>
 <!-- <body class="hold-transition register-page bg-img" style="background-image:url(../images/error/bg-3.jpg);"> -->
 	<body class="hold-transition register-page bg-img register_body">
+	<?php session_start();
 
+require "conn.php";
+
+
+if(isset($_POST['submit']))
+{
+
+$username=$_POST['username'];
+$pno=$_POST['pno'];
+$email = $_POST['email'];
+
+
+$email_query="SELECT email from users where email = '$email'";
+$email_stmt = mysqli_query($conn,$email_query);
+$count_email = mysqli_num_rows($email_stmt);
+if($count_email > 0){
+  ?>
+  <script>
+window.addEventListener('load', function() {
+      swal({
+        title: "Mail ID already exised",
+        text: "",
+        icon: "warning",
+        button: "OK",
+      }).then((okey) => {
+        if (okey) {
+          window.location.href = "register.php";
+        }
+      });
+    })
+</script>
+  <?php
+}else{
+// success!
+$password =$_POST['password'];
+$password = md5($password);
+$query="INSERT into users(name,username,pno,email,password) values(?,?,?,?,?)";
+$stmt = $conn->prepare($query);
+$rc=$stmt->bind_param('ssiss', $username,$username,$pno,$email,$password);
+$stmt->execute();
+?>
+
+<script>
+window.addEventListener('load', function() {
+	Swal.fire("SweetAlert2 is working!");
+          window.location.href = "login.php";
+       
+    })
+</script>
+<?php
+}
+}
+?>
 	<div class="container h-p100">
 		<div class="row align-items-center justify-content-md-center h-p100">
 			<div class="col-lg-4 col-md-8 col-12">
@@ -51,40 +104,31 @@
 
 					<form action="" method="post" class="form-element">
 					  <div class="form-group has-feedback">
-						<input type="text" class="form-control" placeholder="Full name">
+						<input type="text" name="username" class="form-control" placeholder="Full name">
 						<!-- <span class="ion ion-person form-control-feedback"></span> -->
 					  </div>
 					  <div class="form-group has-feedback">
-					  <input type="number" class="form-control" placeholder="Phone">
+					  <input type="number" name="pno" class="form-control" placeholder="Phone">
 						<!-- <span class="ion ion-person form-control-feedback"></span> -->
 					  </div>
 					  <div class="form-group has-feedback">
-						<input type="email" class="form-control" placeholder="Email">
+						<input type="email" name="email" class="form-control" placeholder="Email">
 						<!-- <span class="ion ion-email form-control-feedback"></span> -->
 					  </div>
 					  <div class="form-group has-feedback">
-						<input type="password" class="form-control" placeholder="Password">
+						<input type="password" name="password" class="form-control" placeholder="Password">
 						<!-- <span class="ion ion-locked form-control-feedback"></span> -->
 					  </div>
 					  <div class="form-group has-feedback">
-						<input type="password" class="form-control" placeholder="Confirm password">
+						<input type="password" name="cpassword" class="form-control" placeholder="Confirm password">
 						<!-- <span class="ion ion-log-in form-control-feedback"></span> -->
 					  </div>
-					  <div class="form-group has-feedback">
-						<select class="form-control">
-							<option>Select</option>
-						  </select>
-					  </div>
+					 
 					  <div class="row">
-						<div class="col-12">
-						  <div class="checkbox">
-							<input type="checkbox" id="basic_checkbox_1" >
-							<label for="basic_checkbox_1">I agree to the <a href="#"><b>Terms</b></a></label>
-						  </div>
-						</div>
+						
 						<!-- /.col -->
 						<div class="col-12 text-center">
-						  <button type="submit" class="btn btn-info btn-block margin-top-10">SIGN UP</button>
+						  <button  type="submit" name="submit" class="btn btn-info btn-block margin-top-10">SIGN UP</button>
 						</div>
 						<!-- /.col -->
 					  </div>
@@ -105,7 +149,7 @@
 		</div>
 	</div>
 
-
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<!-- jQuery 3 -->
 	<script src="./assets/vendor_components/jquery-3.3.1/jquery-3.3.1.min.js"></script>
 	
