@@ -171,7 +171,7 @@ $current_date = date("Y-m-d H:i:s");
 </style>
 
 <?php
-
+ 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Retrieve form data
