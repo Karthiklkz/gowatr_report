@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php require "conn.php";
+date_default_timezone_set("Asia/Calcutta");   //India time (GMT+5:30)
+$current_date = date("Y-m-d H:i:s");
 
+?>
 
 
 <head>
@@ -165,6 +169,95 @@
 
  
 </style>
+
+<?php
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Retrieve form data
+    $power = mysqli_real_escape_string($conn, $_POST['power']);
+    $power_issue = mysqli_real_escape_string($conn, $_POST['power_issue']);
+    $network = mysqli_real_escape_string($conn, $_POST['network']);
+    $network_issue = mysqli_real_escape_string($conn, $_POST['network_issue']);
+    $iot_1 = mysqli_real_escape_string($conn, $_POST['iot_1']);
+    $iot1_issue = mysqli_real_escape_string($conn, $_POST['iot1_issue']);
+    $iot_2 = mysqli_real_escape_string($conn, $_POST['iot2']);
+    $iot2_issue = mysqli_real_escape_string($conn, $_POST['iot2_issue']);
+    $summary = mysqli_real_escape_string($conn, $_POST['summary']);
+
+    // Handle multiple file uploads
+    $imageFiles = $_FILES['images'];
+    $uploadedFiles = array();
+
+    foreach ($imageFiles['tmp_name'] as $key => $tmp_name) {
+        // Check if file upload is successful
+        if ($imageFiles['error'][$key] == 0) {
+            // Check if the uploaded file is an image
+            $imageFileType = strtolower(pathinfo($imageFiles['name'][$key], PATHINFO_EXTENSION));
+            $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif');
+            
+            if (in_array($imageFileType, $allowedExtensions)) {
+                // Generate a unique filename
+                $target_dir = "uploads/";
+                $target_file = $target_dir . uniqid() . '.' . $imageFileType;
+
+                // Move the uploaded file to the destination directory
+                if (move_uploaded_file($tmp_name, $target_file)) {
+                    $uploadedFiles[] = $target_file;
+                } else {
+                    echo "Error moving one or more files to the destination directory.";
+                    break; // Stop processing further files on error
+                }
+            } else {
+                echo "Invalid file format. Only JPG, JPEG, PNG, and GIF files are allowed.";
+                break; // Stop processing further files on error
+            }
+        } else {
+            echo "Error uploading one or more files.";
+            break; // Stop processing further files on error
+        }
+    }
+
+    // Encode the array of image paths as JSON
+    $imagesJson = json_encode($uploadedFiles);
+
+    // Insert data into the database using prepared statement
+    $sql = "INSERT INTO qsir (time_received, power, power_issue, network, network_issue, iot_1, iot1_issue, iot_2, iot2_issue, summary, images)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "sssssssssss", $current_date, $power, $power_issue, $network, $network_issue, $iot_1, $iot1_issue, $iot_2, $iot2_issue, $summary, $imagesJson);
+
+    if (mysqli_stmt_execute($stmt)) {
+       
+            ?>
+ <script>
+window.addEventListener('load', function() {
+    
+
+
+      Swal.fire({
+        title: "User Request updated",
+        text: "Please Wait Gowatr will solve your issue",
+        icon: "warning"
+    });
+    })
+
+
+</script>
+<?php
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
+
+    mysqli_stmt_close($stmt);
+}
+
+mysqli_close($conn);
+
+
+
+?>
 
 <body class="hold-transition skin-black light-sidebar sidebar-mini">
     <!-- Site wrapper -->
@@ -367,9 +460,9 @@
 
 
 
+                        
 
-
-                            <form role="form" class="form-element">
+                        <form role="form" class="form-element" action="user_request.php" method="post" enctype="multipart/form-data">
                                 <div class="box-body">
                                     <div class="row">
 
@@ -377,7 +470,7 @@
 
                                             <div class="form-group beside">
                                                 <label for="power1">Power Issue</label>
-                                                <select id="power1" class="form-control" onchange="toggleTextarea1('power1')">
+                                                <select id="power1" name="power" class="form-control" onchange="toggleTextarea1('power1')">
                                                     <option hidden>Select</option>
                                                     <option value="available">Available</option>
                                                     <option value="Not Available">Not Available</option>
@@ -385,19 +478,14 @@
                                                 </select>
                                             </div>
                                             <div id="reasonTextarea1" class="beside">
-                                                <textarea style="resize: none;" id="reason" placeholder="Reason"></textarea>
+                                                <textarea style="resize: none;" id="reason" name="power_issue" placeholder="Reason"></textarea>
                                             </div>
                                         </div>
-
-
-
-
-
 
                                         <div class="col-sm-12 col-md-6">
                                             <div class="form-group beside">
                                                 <label for="exampleInputEmail1">Network Issue</label>
-                                                <select id="power2" class="form-control" onchange="toggleTextarea2('power2')">
+                                                <select id="power2" name="network" class="form-control" onchange="toggleTextarea2('power2')">
                                                     <option hidden>Select</option>
                                                     <option value="available">Available</option>
                                                     <option value="Not Available">Not Available</option>
@@ -405,13 +493,13 @@
                                                 </select>
                                             </div>
                                             <div id="reasonTextarea2" class="beside">
-                                                <textarea style="resize: none;" id="reason" placeholder="Reason"></textarea>
+                                                <textarea style="resize: none;"  name="network_issue" id="reason" placeholder="Reason"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-6">
                                             <div class="form-group beside">
                                                 <label for="exampleInputEmail1">IoT 1 Issue</label>
-                                                <select id="power3" class="form-control" onchange="toggleTextarea3('power3')">
+                                                <select id="power3" name="iot_1" class="form-control" onchange="toggleTextarea3('power3')">
                                                     <option hidden>Select</option>
                                                     <option value="working">Working</option>
                                                     <option value="Not working">Not working</option>
@@ -419,7 +507,7 @@
                                                 </select>
                                             </div>
                                             <div id="reasonTextarea3" class="beside">
-                                                <textarea style="resize: none;" id="reason" placeholder="Reason"></textarea>
+                                                <textarea style="resize: none;"  name="iot1_issue"  id="reason" placeholder="Reason"></textarea>
                                             </div>
                                         </div>
 
@@ -429,7 +517,7 @@
                                         <div class="col-sm-12 col-md-6">
                                             <div class="form-group beside">
                                                 <label for="exampleInputEmail1">IoT 2 Issue</label>
-                                                <select id="power4" class="form-control" onchange="toggleTextarea4('power4')">
+                                                <select name="iot2" id="power4" class="form-control" onchange="toggleTextarea4('power4')">
                                                     <option hidden>Select</option>
                                                     <option value="working">Working</option>
                                                     <option value="Not working">Not working</option>
@@ -437,9 +525,18 @@
                                                 </select>
                                             </div>
                                             <div id="reasonTextarea4" class="beside">
-                                                <textarea style="resize: none;" id="reason" placeholder="Reason"></textarea>
+                                                <textarea style="resize: none;" name="iot2_issue" id="reason" placeholder="Reason"></textarea>
                                             </div>
                                         </div>
+                                         
+                                        <div class="col-md-6">
+                                            <div id="reasonTextar" class="">
+                                                <textarea style="resize: none;" name="summary" id="reason" placeholder="Reason"></textarea>
+                                               </div>
+                                        </div>
+
+
+
                                         <div class="col-sm-12 col-md-12 ">
 
 
@@ -457,7 +554,9 @@
 
 
                                             </div>
-                                            <input style="display: none" type="file" id="files" multiple />
+                                            
+                                            <input style="display: none" name="images[]" type="file" id="files" multiple />
+
 
                                         </div>
 
@@ -467,6 +566,7 @@
 
 
                                 </div>
+                                
                                 <div class="box-footer">
                                     <button type="submit" class="btn btn-danger">Submit</button>
                                 </div>
@@ -531,7 +631,7 @@
 
     <!-- <script src="js/pages/fullscreen.js"></script> -->
     <script src="./main/js/formReason.js"></script>
-    <!-- <script src="D:\xampp\htdocs\git_report\main\js\formReason.js"></script> -->
+    <script src="D:\xampp\htdocs\git_report\main\js\formReason.js"></script>
     <script>
         function toggleTextarea1(powerId) {
             const selectedOption = document.getElementById(powerId).value;
@@ -608,9 +708,16 @@
         });
 
         var myInput = document.getElementById('myFileInput');
-    </script>
+    
+        document.addEventListener('DOMContentLoaded'), function() {
+            const imageUpload = document.getElementById('files');
+            const imageForm = document.getElementById('imageForm');
+				const imageDataInput = document.getElementById('imageData');
+				const submitButton = document.getElementById('submitButton');
 
-
+        }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 

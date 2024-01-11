@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <title>Document</title>
   <!-- Bootstrap 4.0-->
-	<link rel="stylesheet" href="./assets/vendor_components/bootstrap/dist/css/bootstrap.css">
-	
-	<!-- Bootstrap extend-->
-	<!-- <link rel="stylesheet" href="css/bootstrap-extend.css"> -->
+  <link rel="stylesheet" href="./assets/vendor_components/bootstrap/dist/css/bootstrap.css">
+
+  <!-- Bootstrap extend-->
+  <!-- <link rel="stylesheet" href="css/bootstrap-extend.css"> -->
   <link rel="stylesheet" href="./css/bootstrap-extend.css">
-	
-	<!-- theme style -->
-	<link rel="stylesheet" href="./css/master_style.css">
-	
-	<!-- AIUI Admin skins -->
-	<link rel="stylesheet" href="./css/skins/_all-skins.css">	
+
+  <!-- theme style -->
+  <link rel="stylesheet" href="./css/master_style.css">
+
+  <!-- AIUI Admin skins -->
+
 </head>
 
 <body>
-  <aside class="main-sidebar">
+  <aside class="main-sidebar" style="background-color: #c8c8ff;">
     <!-- sidebar-->
     <section class="sidebar">
       <!-- Sidebar user panel -->
@@ -40,17 +40,16 @@
       <!-- sidebar menu-->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="treeview">
-          <a href="index">
-            <i class="mdi mdi-view-dashboard"></i> <span>Dashboard</span>
-            <span class="pull-right-container">
-              <i class="ti-plus pull-right"></i>
-            </span>
+          <a href="./index.php" style="display: flex; gap: 20px;    align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+              <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+              <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+            </svg> <span style="margin-right: 13px;">Dashboard</span>
+
           </a>
-          <ul class="treeview-menu">
-            <li><a href="index.html"><i class="mdi mdi-resize-bottom-right"></i>Sub menu 1</a></li>
-            <li><a href="index2.html"><i class="mdi mdi-resize-bottom-right"></i>Sub menu 2</a></li>
-            <li><a href="index3.html"><i class="mdi mdi-resize-bottom-right"></i>Sub menu 3</a></li>
-          </ul>
+
         </li>
 
 
@@ -58,20 +57,27 @@
 
 
         <li>
-          <a href="user_request">
-            <i class="mdi mdi-email-variant"></i> <span>USER REQUEST</span>
+          <a href="user_request" style="display: flex;  gap: 20px;       align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+            </svg> <span>QSIR</span>
           </a>
         </li>
 
         <li>
-          <a href="reqStatHandler">
-            <i class="mdi mdi-email-variant"></i> <span>Manage Request</span>
+          <a href="reqStatHandler" style="display: flex;  gap: 20px;     align-items: center;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-asana" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M17 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M7 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            </svg> <span>Manage</span>
           </a>
         </li>
 
-   
-
-        <li class="treeview">
+        <li >
           <a href="#">
             <i class="mdi mdi-file-document"></i> <span>Checkdata</span>
             <span class="pull-right-container">
@@ -108,6 +114,24 @@
             <li><a href="hcl"><i class="mdi mdi-resize-bottom-right"></i>HCL</a></li>
           </ul>
         </li>
+
+<!-- 
+        <li class="treeview">
+          <a href="#" style="display: flex;  gap: 20px;       align-items: center;">
+            <i class="mdi mdi-file-document"></i> <span>Checkdata</span>
+            <span class="pull-right-container">
+              <i class="ti-plus pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="form-advanced.html"><i class="mdi mdi-resize-bottom-right"></i>Adv.Elements</a></li>
+            <li><a href="code-editor.html"><i class="mdi mdi-resize-bottom-right"></i>Code Editor</a></li>
+            <li><a href="editors.html"><i class="mdi mdi-resize-bottom-right"></i>Editors</a></li>
+            <li><a href="form-validation.html"><i class="mdi mdi-resize-bottom-right"></i>Validation</a></li>
+            <li><a href="form-wizard.html"><i class="mdi mdi-resize-bottom-right"></i>Wizard</a></li>
+            <li><a href="form-general.html"><i class="mdi mdi-resize-bottom-right"></i>General Elements</a></li>
+          </ul>
+        </li> -->
 
       </ul>
     </section>
