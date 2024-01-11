@@ -28,7 +28,7 @@ $current_date = date("Y-m-d H:i:s");
     <link rel="stylesheet" href="./css/master_style.css">
 
     <!-- AIUI Admin skins -->
-    <link rel="stylesheet" href="./css/skins/_all-skins.css">
+    <link rel="stylesheet" href="./main/css/skins/all-skins.css">
 
 
 

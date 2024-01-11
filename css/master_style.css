@@ -40,13 +40,14 @@ Project:	AIUI Admin - Responsive Admin Template
 /******************* 
 import icon and fonts Styles 
 *******************/
-@import url(../../assets/vendor_components/font-awesome/css/font-awesome.css);
-@import url(../../assets/vendor_components/Ionicons/css/ionicons.css);
-@import url(../../assets/vendor_components/themify-icons/themify-icons.css);
-@import url(../../assets/vendor_components/linea-icons/linea.css);
-@import url(../../assets/vendor_components/glyphicons/glyphicon.css);
-@import url(../../assets/vendor_components/flag-icon/css/flag-icon.css);
-@import url(../../assets/vendor_components/material-design-iconic-font/css/materialdesignicons.css);
+/* @import url(../assets/vendor_components/font-awesome/css/font-awesome.css); */
+@import url(../assets/vendor_components/font-awesome/css/font-awesome.css);
+@import url(../assets/vendor_components/Ionicons/css/ionicons.css);
+@import url(../assets/vendor_components/themify-icons/themify-icons.css);
+@import url(../assets/vendor_components/linea-icons/linea.css);
+@import url(../assets/vendor_components/glyphicons/glyphicon.css);
+@import url(../assets/vendor_components/flag-icon/css/flag-icon.css);
+@import url(../assets/vendor_components/material-design-iconic-font/css/materialdesignicons.css);
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
 /*------------------------------------------------------------------
@@ -680,7 +681,7 @@ a:active, a:focus, a:hover {
     height: auto;
     margin: 0 auto;
     display: block;
-    border: 5px solid rgba(56, 154, 240, .27);
+    /* border: 5px solid rgba(56, 154, 240, .27); */
 }
 .user-panel>.info {
     padding: 5px;

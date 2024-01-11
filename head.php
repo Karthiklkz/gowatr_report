@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="css/master_style.css">
 
 	<!-- AIUI Admin skins -->
-	<link rel="stylesheet" href="./main/css/skins/all-skins.css">
+	<link rel="stylesheet" href="css/skins/all-skins.css">
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

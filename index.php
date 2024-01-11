@@ -27,7 +27,7 @@
 
 
 	<!-- AIUI Admin skins -->
-	<link rel="stylesheet" href="./css/skins/all-skins.css">
+	<!-- <link rel="stylesheet" href="./css/skins/all-skins.css"> -->
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -87,11 +87,12 @@
 		border: 1px solid black;
 		margin: 5px 0;
 	}
+
 	@media (min-width: 767px) {
-		.sidebar-toggle{
+		.sidebar-toggle {
 			display: none;
 		}
-}
+	}
 </style>
 
 <body class="hold-transition skin-black dark-sidebar">
@@ -108,14 +109,12 @@
 					</svg>
 				</a>
 				<!-- Logo -->
-			
+
 			</div>
 			<!-- Header Navbar -->
 			<nav class="navbar navbar-static-top">
 				<!-- Sidebar toggle button-->
-				<div class="ml-10 app-menu">
 
-				</div>
 
 				<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav">
@@ -124,7 +123,7 @@
 						<!-- User Account-->
 						<li class="dropdown user user-menu">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-								<img src="images/avatar/avatar.png" class="img-fluid" alt="" />
+								<img src="images/avatar/avatar.png" class="img-fluid" alt="" >
 							</a>
 							<ul class="dropdown-menu scale-up">
 								<!-- Menu Body -->
@@ -147,302 +146,280 @@
 						</li>
 					</ul>
 				</div>
-			</nav>
-		</header>
+			</nav> </header>
 
-		<!-- Left side column. contains the logo and sidebar -->
-		<?php require "sidebar.php"; ?>
+			<!-- Left side column. contains the logo and sidebar -->
+			<?php require "sidebar.php"; ?>
 
-		<!-- Content Wrapper. Contains page content -->
-		<div class="content-wrapper">
-			<!-- Content Header (Page header) -->
-			<div class="content-header d-none d-md-block">
-				<div class="d-flex align-items-center">
-					<div class="mr-auto">
-						<h3 class="page-title br-0">Dashboard</h3>
-					</div>
-					<!-- <div class="right-title">
-						<div class="d-flex mt-10 justify-content-end">
-							<div class="d-md-flex mr-20 ml-10 d-none">
-								<div class="chart-text mr-10">
-									<p class="mb-0 font-size-12">THIS MONTH</p>
-									<h4 class="my-0 text-primary">$12,125</h4>
-								</div>
-								<div class="spark-chart">
-									<div id="thismonth"><canvas width="60" height="35" style="display: inline-block; width: 60px; height: 35px; vertical-align: top;"></canvas></div>
-								</div>
-							</div>
-							<div class="d-md-flex ml-10 d-none">
-								<div class="chart-text mr-10">
-									<p class="mb-0 font-size-12">LAST YEAR</p>
-									<h4 class="my-0 text-danger">$22,754</h4>
-								</div>
-								<div class="spark-chart">
-									<div id="lastyear"><canvas width="60" height="35" style="display: inline-block; width: 60px; height: 35px; vertical-align: top;"></canvas></div>
-								</div>
-							</div>
+			<!-- Content Wrapper. Contains page content -->
+			<div class="content-wrapper">
+				<!-- Content Header (Page header) -->
+				<div class="content-header d-none d-md-block">
+					<div class="d-flex align-items-center">
+						<div class="mr-auto">
+							<h3 class="page-title br-0">Dashboard</h3>
 						</div>
-					</div> -->
+
+					</div>
 				</div>
+
+				<!-- Main content -->
+				<section class="content">
+					<div class="container-full">
+						<div class="row">
+							<div class="col-md-3 col-sm">
+								<div class="box">
+									<div class="box-body">
+										<div class="d-flex justify-content-between align-items-center site_live">
+											<div>
+												<h3 class="mb-0 mt-0">Site Data</h3>
+
+											</div>
+											<div>
+												<!-- <h3 class="mb-0 mt-0">Live <span style="color: green; font-size: 27px;  font-weight: 900; ">.</span></h3> -->
+												<h3 class="mb-0 mt-0">Live <span style="color: green;" class="logged-in">●</span></h3>
+
+
+											</div>
+
+										</div>
+										<hr style="margin: 10px 0px 0px 0px; border: 1px solid #5e5e8b">
+										<!-- <div class="progress progress-sm mt-30 mb-10">
+										<div class="progress-bar bg-danger" role="progressbar" style="width: 52%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+									</div> -->
+										<div class="d-flex justify-content-between align-items-center circle_text">
+											<div>
+												<h3 class="mb-0 mt-0"> Active Site Date Tables</h3>
+											</div>
+											<div class="circle_container">
+												<div class="circle">
+													<div class="fraction">
+														<div>
+															<span style="margin-left: 26px;">25</span> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" style="color: green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+																<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+																<path d="M12 5l0 14" />
+																<path d="M16 9l-4 -4" />
+																<path d="M8 9l4 -4" />
+															</svg>
+														</div>
+
+														<hr>
+														<span>23</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
+											<h6 style="    color: cadetblue;" class="mb-0 mt-0">Baashyaam Site Down by 8 hours</h6>
+
+
+										</div>
+										<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
+											<h6 style="    color: cadetblue;" class="mb-0 mt-0">Green Pharma site Down by 8 hours</h6>
+
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm">
+								<div class="box">
+									<div class="box-body">
+										<div class="d-flex justify-content-between align-items-center site_live">
+											<div>
+												<h3 class="mb-0 mt-0">Site Data</h3>
+
+											</div>
+											<div>
+												<!-- <h3 class="mb-0 mt-0">Live <span style="color: green; font-size: 27px;  font-weight: 900; ">.</span></h3> -->
+												<h3 class="mb-0 mt-0">Live <span style="color: green;" class="logged-in">●</span></h3>
+
+
+											</div>
+
+										</div>
+										<hr style="margin: 10px 0px 0px 0px; border: 1px solid #5e5e8b">
+										<!-- <div class="progress progress-sm mt-30 mb-10">
+										<div class="progress-bar bg-danger" role="progressbar" style="width: 52%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+									</div> -->
+										<div class="d-flex justify-content-between align-items-center circle_text">
+											<div>
+												<h3 class="mb-0 mt-0"> Active Site Date Tables</h3>
+											</div>
+											<div class="circle_container">
+												<div class="circle">
+													<div class="fraction">
+														<div>
+															<span style="margin-left: 26px;">25</span> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" style="color: green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+																<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+																<path d="M12 5l0 14" />
+																<path d="M16 9l-4 -4" />
+																<path d="M8 9l4 -4" />
+															</svg>
+														</div>
+
+														<hr>
+														<span>23</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
+											<h6 style="    color: cadetblue;" class="mb-0 mt-0">Baashyaam Site Down by 8 hours</h6>
+
+
+										</div>
+										<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
+											<h6 style="    color: cadetblue;" class="mb-0 mt-0">Green Pharma site Down by 8 hours</h6>
+
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm">
+								<div class="box">
+									<div class="box-body">
+										<div class="d-flex justify-content-between align-items-center site_live">
+											<div>
+												<h3 class="mb-0 mt-0">Site Data</h3>
+
+											</div>
+											<div>
+												<!-- <h3 class="mb-0 mt-0">Live <span style="color: green; font-size: 27px;  font-weight: 900; ">.</span></h3> -->
+												<h3 class="mb-0 mt-0">Live <span style="color: green;" class="logged-in">●</span></h3>
+
+
+											</div>
+
+										</div>
+										<hr style="margin: 10px 0px 0px 0px; border: 1px solid #5e5e8b">
+										<!-- <div class="progress progress-sm mt-30 mb-10">
+										<div class="progress-bar bg-danger" role="progressbar" style="width: 52%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+									</div> -->
+										<div class="d-flex justify-content-between align-items-center circle_text">
+											<div>
+												<h3 class="mb-0 mt-0"> Active Site Date Tables</h3>
+											</div>
+											<div class="circle_container">
+												<div class="circle">
+													<div class="fraction">
+														<div>
+															<span style="margin-left: 26px;">25</span> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" style="color: green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+																<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+																<path d="M12 5l0 14" />
+																<path d="M16 9l-4 -4" />
+																<path d="M8 9l4 -4" />
+															</svg>
+														</div>
+
+														<hr>
+														<span>23</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
+											<h6 style="    color: cadetblue;" class="mb-0 mt-0">Baashyaam Site Down by 8 hours</h6>
+
+
+										</div>
+										<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
+											<h6 style="    color: cadetblue;" class="mb-0 mt-0">Green Pharma site Down by 8 hours</h6>
+
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="box">
+									<div class="box-body">
+										<div class="d-flex justify-content-between align-items-center site_live">
+											<div>
+												<h3 class="mb-0 mt-0">Site Data</h3>
+
+											</div>
+											<div>
+												<!-- <h3 class="mb-0 mt-0">Live <span style="color: green; font-size: 27px;  font-weight: 900; ">.</span></h3> -->
+												<h3 class="mb-0 mt-0">Live <span style="color: green;" class="logged-in">●</span></h3>
+
+
+											</div>
+
+										</div>
+										<hr style="margin: 10px 0px 0px 0px; border: 1px solid #5e5e8b">
+										<!-- <div class="progress progress-sm mt-30 mb-10">
+										<div class="progress-bar bg-danger" role="progressbar" style="width: 52%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+									</div> -->
+										<div class="d-flex justify-content-between align-items-center circle_text">
+											<div>
+												<h3 class="mb-0 mt-0"> Active Site Date Tables</h3>
+											</div>
+											<div class="circle_container">
+												<div class="circle">
+													<div class="fraction">
+														<div>
+															<span style="margin-left: 26px;">25</span> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" style="color: green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+																<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+																<path d="M12 5l0 14" />
+																<path d="M16 9l-4 -4" />
+																<path d="M8 9l4 -4" />
+															</svg>
+														</div>
+
+														<hr>
+														<span>23</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
+											<h6 style="    color: cadetblue;" class="mb-0 mt-0">Baashyaam Site Down by 8 hours</h6>
+
+
+										</div>
+										<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
+											<h6 style="    color: cadetblue;" class="mb-0 mt-0">Green Pharma site Down by 8 hours</h6>
+
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+
+
+
+						</div>
+				</section>
+				<!-- /.content -->
 			</div>
+			<!-- /.content-wrapper -->
+			<footer class="main-footer">
+				<div class="pull-right d-none d-sm-inline-block">
+					<ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+						<li class="nav-item">
+							<a class="nav-link" href="javascript:void(0)">FAQ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Purchase Now</a>
+						</li>
+					</ul>
+				</div> &copy; 2019 <a href="https://www.multipurposethemes.com/">Multi-Purpose Themes</a>. All Rights Reserved.
+			</footer>
 
-			<!-- Main content -->
-			<section class="content">
-				<div class="container-full">
-					<div class="row">
-						<div class="col-md-3">
-							<div class="box">
-								<div class="box-body">
-									<div class="d-flex justify-content-between align-items-center site_live">
-										<div>
-											<h3 class="mb-0 mt-0">Site Data</h3>
+			<!-- Control Sidebar -->
 
-										</div>
-										<div>
-											<!-- <h3 class="mb-0 mt-0">Live <span style="color: green; font-size: 27px;  font-weight: 900; ">.</span></h3> -->
-											<h3 class="mb-0 mt-0">Live <span style="color: green;" class="logged-in">●</span></h3>
+			<!-- /.control-sidebar -->
 
-
-										</div>
-
-									</div>
-									<hr style="margin: 10px 0px 0px 0px; border: 1px solid #5e5e8b">
-									<!-- <div class="progress progress-sm mt-30 mb-10">
-										<div class="progress-bar bg-danger" role="progressbar" style="width: 52%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-									</div> -->
-									<div class="d-flex justify-content-between align-items-center circle_text">
-										<div>
-											<h3 class="mb-0 mt-0"> Active Site Date Tables</h3>
-										</div>
-										<div class="circle_container">
-											<div class="circle">
-												<div class="fraction">
-													<div>
-													<span style="margin-left: 26px;">25</span> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" style="color: green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-														<path d="M12 5l0 14" />
-														<path d="M16 9l-4 -4" />
-														<path d="M8 9l4 -4" />
-													</svg>
-													</div>
-												
-													<hr>
-													<span>23</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
-										<h6 style="    color: cadetblue;" class="mb-0 mt-0">Baashyaam Site Down by 8 hours</h6>
-										
-
-									</div>
-									<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
-										<h6 style="    color: cadetblue;" class="mb-0 mt-0">Green Pharma site Down by 8 hours</h6>
-										
-
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="box">
-								<div class="box-body">
-									<div class="d-flex justify-content-between align-items-center site_live">
-										<div>
-											<h3 class="mb-0 mt-0">Site Data</h3>
-
-										</div>
-										<div>
-											<!-- <h3 class="mb-0 mt-0">Live <span style="color: green; font-size: 27px;  font-weight: 900; ">.</span></h3> -->
-											<h3 class="mb-0 mt-0">Live <span style="color: green;" class="logged-in">●</span></h3>
-
-
-										</div>
-
-									</div>
-									<hr style="margin: 10px 0px 0px 0px; border: 1px solid #5e5e8b">
-									<!-- <div class="progress progress-sm mt-30 mb-10">
-										<div class="progress-bar bg-danger" role="progressbar" style="width: 52%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-									</div> -->
-									<div class="d-flex justify-content-between align-items-center circle_text">
-										<div>
-											<h3 class="mb-0 mt-0"> Active Site Date Tables</h3>
-										</div>
-										<div class="circle_container">
-											<div class="circle">
-												<div class="fraction">
-													<div>
-													<span style="margin-left: 26px;">25</span> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" style="color: green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-														<path d="M12 5l0 14" />
-														<path d="M16 9l-4 -4" />
-														<path d="M8 9l4 -4" />
-													</svg>
-													</div>
-												
-													<hr>
-													<span>23</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
-										<h6 style="    color: cadetblue;" class="mb-0 mt-0">Baashyaam Site Down by 8 hours</h6>
-										
-
-									</div>
-									<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
-										<h6 style="    color: cadetblue;" class="mb-0 mt-0">Green Pharma site Down by 8 hours</h6>
-										
-
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="box">
-								<div class="box-body">
-									<div class="d-flex justify-content-between align-items-center site_live">
-										<div>
-											<h3 class="mb-0 mt-0">Site Data</h3>
-
-										</div>
-										<div>
-											<!-- <h3 class="mb-0 mt-0">Live <span style="color: green; font-size: 27px;  font-weight: 900; ">.</span></h3> -->
-											<h3 class="mb-0 mt-0">Live <span style="color: green;" class="logged-in">●</span></h3>
-
-
-										</div>
-
-									</div>
-									<hr style="margin: 10px 0px 0px 0px; border: 1px solid #5e5e8b">
-									<!-- <div class="progress progress-sm mt-30 mb-10">
-										<div class="progress-bar bg-danger" role="progressbar" style="width: 52%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-									</div> -->
-									<div class="d-flex justify-content-between align-items-center circle_text">
-										<div>
-											<h3 class="mb-0 mt-0"> Active Site Date Tables</h3>
-										</div>
-										<div class="circle_container">
-											<div class="circle">
-												<div class="fraction">
-													<div>
-													<span style="margin-left: 26px;">25</span> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" style="color: green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-														<path d="M12 5l0 14" />
-														<path d="M16 9l-4 -4" />
-														<path d="M8 9l4 -4" />
-													</svg>
-													</div>
-												
-													<hr>
-													<span>23</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
-										<h6 style="    color: cadetblue;" class="mb-0 mt-0">Baashyaam Site Down by 8 hours</h6>
-										
-
-									</div>
-									<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
-										<h6 style="    color: cadetblue;" class="mb-0 mt-0">Green Pharma site Down by 8 hours</h6>
-										
-
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3">
-							<div class="box">
-								<div class="box-body">
-									<div class="d-flex justify-content-between align-items-center site_live">
-										<div>
-											<h3 class="mb-0 mt-0">Site Data</h3>
-
-										</div>
-										<div>
-											<!-- <h3 class="mb-0 mt-0">Live <span style="color: green; font-size: 27px;  font-weight: 900; ">.</span></h3> -->
-											<h3 class="mb-0 mt-0">Live <span style="color: green;" class="logged-in">●</span></h3>
-
-
-										</div>
-
-									</div>
-									<hr style="margin: 10px 0px 0px 0px; border: 1px solid #5e5e8b">
-									<!-- <div class="progress progress-sm mt-30 mb-10">
-										<div class="progress-bar bg-danger" role="progressbar" style="width: 52%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-									</div> -->
-									<div class="d-flex justify-content-between align-items-center circle_text">
-										<div>
-											<h3 class="mb-0 mt-0"> Active Site Date Tables</h3>
-										</div>
-										<div class="circle_container">
-											<div class="circle">
-												<div class="fraction">
-													<div>
-													<span style="margin-left: 26px;">25</span> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-up" style="color: green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-														<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-														<path d="M12 5l0 14" />
-														<path d="M16 9l-4 -4" />
-														<path d="M8 9l4 -4" />
-													</svg>
-													</div>
-												
-													<hr>
-													<span>23</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
-										<h6 style="    color: cadetblue;" class="mb-0 mt-0">Baashyaam Site Down by 8 hours</h6>
-										
-
-									</div>
-									<div class="d-flex justify-content-between align-items-center circle_text" style="padding: 15px 15px 0px 15px;">
-										<h6 style="    color: cadetblue;" class="mb-0 mt-0">Green Pharma site Down by 8 hours</h6>
-										
-
-									</div>
-
-								</div>
-							</div>
-						</div>
-					
-
-
-
-
-					</div>
-			</section>
-			<!-- /.content -->
-		</div>
-		<!-- /.content-wrapper -->
-		<footer class="main-footer">
-			<div class="pull-right d-none d-sm-inline-block">
-				<ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
-					<li class="nav-item">
-						<a class="nav-link" href="javascript:void(0)">FAQ</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Purchase Now</a>
-					</li>
-				</ul>
-			</div> &copy; 2019 <a href="https://www.multipurposethemes.com/">Multi-Purpose Themes</a>. All Rights Reserved.
-		</footer>
-
-		<!-- Control Sidebar -->
-	
-		<!-- /.control-sidebar -->
-
-		<!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
-		<div class="control-sidebar-bg"></div>
+			<!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+			<div class="control-sidebar-bg"></div>
 
 	</div>
 	<!-- ./wrapper -->
@@ -450,29 +427,29 @@
 
 
 	<!-- jQuery 3 -->
-	<script src="assets/vendor_components/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+	<script src="./assets/vendor_components/jquery-3.3.1/jquery-3.3.1.min.js"></script>
 
 	<!-- jQuery UI 1.11.4 -->
-	<script src="assets/vendor_components/jquery-ui/jquery-ui.js"></script>
+	<script src="./assets/vendor_components/jquery-ui/jquery-ui.js"></script>
 
 	<!-- popper -->
-	<script src="assets/vendor_components/popper/dist/popper.min.js"></script>
+	<script src="./assets/vendor_components/popper/dist/popper.min.js"></script>
 
 	<!-- Bootstrap 4.0-->
-	<script src="assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="./assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>
 
 	<!-- Slimscroll -->
-	<script src="assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+	<script src="./assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
 
 	<!-- FastClick -->
-	<script src="assets/vendor_components/fastclick/lib/fastclick.js"></script>
+	<script src="./assets/vendor_components/fastclick/lib/fastclick.js"></script>
 
 	<!-- Sparkline -->
-	<script src="assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+	<script src="./assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 
 	<!-- apexcharts -->
-	<script src="assets/vendor_components/apexcharts-bundle/irregular-data-series.js"></script>
-	<script src="assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+	<script src="./assets/vendor_components/apexcharts-bundle/irregular-data-series.js"></script>
+	<script src="./assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 	<!-- AIUI Admin App -->
